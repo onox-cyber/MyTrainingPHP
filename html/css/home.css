@@ -1,0 +1,11 @@
+@charset "UTF-8";
+
+.main-visual {
+    display: block;
+    line-height: 0;
+}
+
+.main-visual img {
+    width: 100%;
+    height: auto;
+}
