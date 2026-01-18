@@ -8,6 +8,7 @@
 
 :root {
     --header-height: 70px;
+    --content-max-width: 1400px
 }
 
 ul {
@@ -105,6 +106,105 @@ header {
     position: relative;
 }
 
+.header-nav-sp {
+    display: none;
+}
+
+/*  ----------メディア対応--------  */
+
+@media screen and (max-width: 767px) {
+    .header-nav {
+        display: none;
+    }
+    .menu-wrapper {
+        position: relative;
+    }
+
+    .menu-icon {
+        position: absolute;
+        width: 40px;
+        height: 30px;
+        top: 15px;
+        right: 2%;
+        left: auto;
+        cursor: pointer;
+        z-index: 3;
+        display: inline-block;
+    }
+
+    .menu-icon span {
+        display: block;
+        height: 4px;
+        margin: 6px 0;
+        background: #333;
+        border-radius: 2px;
+        transition: 0.4s;
+    }
+
+    #menu-toggle:checked + .menu-icon span:nth-child(1) {
+        transform: translateY(10px) rotate(45deg);
+    }
+    #menu-toggle:checked + .menu-icon span:nth-child(2) {
+        opacity: 0;
+    }
+    #menu-toggle:checked + .menu-icon span:nth-child(3) {
+        transform: translateY(-10px) rotate(-45deg);
+    }
+
+    .overlay {
+        position: fixed;
+        inset: 0;
+        background: rgba(0,0,0,0.5);
+        opacity: 0;
+        pointer-events: none;
+        transition: 0.4s;
+        z-index: 1;
+    }
+
+    #menu-toggle:checked ~ .overlay {
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    /* メニュー本体（左から出す） */
+    .header-nav-sp {
+        display: inline;
+        position: fixed;
+        top: 0;
+        right: -250px; /* ← 初期位置を左へ */
+        width: 250px;
+        height: 100%;
+        background: #fff;
+        box-shadow: 2px 0 8px rgba(0,0,0,0.2);
+        transition: right 0.4s ease;
+        z-index: 2;
+    }
+
+    #menu-toggle:checked ~ .header-nav-sp {
+        right: 0; /* ← 開いたときは左0へ */
+    }
+
+    .header-nav-sp ul {
+        list-style: none;
+        padding: 60px 20px;
+    }
+
+    .header-nav-sp li {
+        margin: 20px 0;
+    }
+
+    .header-nav-sp a {
+        text-decoration: none;
+        color: #333;
+        font-size: 1.2rem;
+        transition: color 0.3s;
+    }
+
+    .menu a:hover {
+        color: #007bff;
+    }
+}
+
 /*
     --------パンくずリスト
 */
@@ -143,7 +243,7 @@ header {
 
 footer {
     width: 100%;
-    padding: 70px 0;
+    padding: 70px 40px;
 }
 
 .footer-info {
