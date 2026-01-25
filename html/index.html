@@ -2,11 +2,12 @@
 <html lang="ja">
     <head>
         <meta charset="utf8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
         <title>HP</title>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- reset.css destyle -->
-    <link rel="stylesheet" href="https://unpkg.com/modern-css-reset/dist/reset.min.css">
+        <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
+        <!--
+            必要に応じてcss読み込み
+        -->
         <link rel="stylesheet" href="css/common.css">
         <link rel="stylesheet" href="css/home.css">
     </head>
@@ -22,10 +23,10 @@
                                 <a href="#">ホーム</a>
                             </li>
                             <li class="nav-item">
-                                <a href="#">あああ</a>
+                                <a href="#">成績</a>
                             </li>
                             <li class="nav-item">
-                                <a href="#">あああ</a>
+                                <a href="#">体力検定</a>
                             </li>
                         </ul>
                     </nav>
@@ -44,15 +45,15 @@
                         <nav class="header-nav-sp">
                             <ul>
                                 <li><a href="#">ホーム</a></li>
-                                <li><a href="#">あああ</a></li>
-                                <li><a href="#">あああ</a></li>
+                                <li><a href="#">成績</a></li>
+                                <li><a href="#">体力検定</a></li>
                             </ul>
                         </nav>
                     </div>
                 </div>
             </div>
         </header>
-        <body>
+        <main>
             <picture class="main-visual">
                 <source media="(min-width: 768px)" srcset="img/home.png">
                 <img src="img/home.png" alt="高等工科学校講堂">
@@ -69,7 +70,7 @@
                 </ul>
             </nav>
             -->
-            <main>
+            <!--
                 <section class="graph-list">
                     <a href="#" class="graph-item">
                         <img src="img/flow.jpg" alt="テスト">
@@ -100,21 +101,64 @@
                         <p class="graph-title">ちんと何かの関係</p>
                     </a>
                 </section>
-            </main>
-            <footer>
-                <div class="footer-info">
-                    <div class="footer-left">
-                        <a href="#" class="logo">
-                            <img src="img/logo.svg" alt="高等工科学校">
-                        </a>
-                        <address>
-                            <p class="place">武山駐屯地</p>
-                            <p>〒238-0317 神奈川県横須賀市御幸浜2-1</p>
-                        </address>
+            -->
+            <section class="features">
+                <div class="feature">
+                    <h2 class="title">一般教育</h2>
+                    <div class="feature-item">
+                        <p class="info">
+                            本校では、将来自衛官を目指す生徒に対し、必要な知識・教養等を習得させるため、県内の普通科高校と同等の教育（一般教育）を行います。
+                            3学年修了時には提携校である神奈川県立横浜修悠館高等学校（通信制）の卒業資格が得られます。
+                        </p>
+                        <picture>
+                            <source media="(min-width: 768px)" srcset="img/jugyou-ippan.jpg">
+                            <img class="sub-visual" src="img/jugyou-ippan.jpg" alt="高等工科学校講堂">
+                        </picture>
                     </div>
-                    <div class="footer-copyright">© HighTechnicalSchool</div>
                 </div>
-            </footer>
-        </body>
+                <div class="feature">
+                    <h2 class="title">専門教育</h2>
+                    <div class="feature-item">
+                        <picture>
+                            <source media="(min-width: 768px)" srcset="img/flow.jpg">
+                            <img class="sub-visual" src="img/flow.jpg" alt="高等工科学校講堂">
+                        </picture>
+                        <p class="info">
+                            陸上自衛隊では、高機能化・システム化された多くの車両、通信電子機器、火器及び航空機等を装備してあらゆる任務を遂行します。
+                            これらの装備品の能力を発揮させるためには、専門的知識や技能が必要とされており、この能力が本校生徒に求められています。
+                            このための教育は、本校における教育と卒業後におこなわれる教育に大別され、本校においては、3年時に将来の技術的スペシャリストとしての素地を身につけるための教育を実施しています。
+                        </p>
+                    </div>
+                </div>
+                <div class="feature">
+                    <h2 class="title">防衛基礎学</h2>
+                    <div class="feature-item">
+                        <p class="info">
+                            一般教育及び専門教育と並行して行われる陸上自衛官として必要な基礎的事項の教育です。
+                            課目は、法令等を学ぶ「防衛教養」と野外における基礎的な行動を学ぶ「戦闘及び戦技訓練」に大別されます。
+                            この他、各学年ごと特色ある競技会を行って体力・気力・チームワークを養い、また部隊研修等を行って陸上自衛隊に関する理解と知識を深めるようにしています。
+                        </p>
+                        <picture>
+                            <source media="(min-width: 768px)" srcset="img/battle.jpg">
+                            <img class="sub-visual" src="img/battle.jpg" alt="高等工科学校講堂">
+                        </picture>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <div class="footer-info">
+                <div class="footer-left">
+                    <a href="#" class="logo">
+                        <img src="img/logo.svg" alt="高等工科学校">
+                    </a>
+                    <address>
+                        <p class="place">武山駐屯地</p>
+                        <p>〒238-0317 神奈川県横須賀市御幸浜2-1</p>
+                    </address>
+                </div>
+                <div class="footer-copyright">© HighTechnicalSchool</div>
+            </div>
+        </footer>
     </body>
 </html>

@@ -1,9 +1,14 @@
 @charset "UTF-8";
 
+main section {
+    padding: 0 80px;
+    max-width: var(--content-max-width);
+}
+
 .main-visual {
     display: block;
     line-height: 0;
-    margin-bottom: 40px;
+    margin-bottom: 80px;
 }
 
 .main-visual img {
@@ -12,13 +17,62 @@
 }
 
 /*
-    -------グラフ一覧
+    -------記事
 */
 
-main {
-    margin: 0 auto;
-    max-width: var(--content-max-width);
+.features {
+    display: flexbox;
 }
+
+.features .title {
+    margin-bottom: 30px;
+    padding-top: 50px;
+    font-size: xx-large;
+}
+
+.feature {
+    position: relative;
+    margin-bottom: 80px;
+}
+
+.feature-item {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.feature-item picture {
+    width: 50%;
+}
+
+.sub-visual {
+    width: 100%;
+    object-fit: contain;
+}
+
+.feature .feature-item .info {
+    width: 50%;
+    height: 100%;
+    font-size: larger;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 2;
+    overflow-wrap: break-word;
+}
+
+.features .title::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    width: 10%;
+    height: 4px;
+    background-color: var(--color-enji);
+}
+
+/*
+    -------グラフ一覧
+*/
 
 .graph-list {
     display: grid;
@@ -53,3 +107,4 @@ main {
     text-align: center;
     margin-top: 30px;
 }
+
